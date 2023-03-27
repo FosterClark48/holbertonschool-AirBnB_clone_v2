@@ -10,6 +10,7 @@ from flask import Flask
 # Create instance of Flask
 app = Flask(__name__)
 
+
 # Tell Flask what URL should trigger function, trailing slashes = ignored
 @app.route('/', methods=['GET'], strict_slashes=False)
 def hello():
