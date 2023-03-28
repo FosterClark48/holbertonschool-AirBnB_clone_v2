@@ -72,14 +72,16 @@ def number_template(n):
 # Route dec for /number_odd_or_even/<int:> URl
 # display HTML page only if n is int or even/odd
 # trailing slashes = ignored
-@app.route('/number_odd_or_even/<int:n>', methods=['GET'], strict_slashes=False)
+@app.route('/number_odd_or_even/<int:n>', methods=['GET'],
+           strict_slashes=False)
 def number_odd_or_even(n):
     """ Route func that renders template if n is int """
     if n % 2 == 0:
         odd_or_even = "even"
     else:
         odd_or_even = "odd"
-    return render_template('6-number_odd_or_even.html', n=n, odd_or_even=odd_or_even)
+    return render_template('6-number_odd_or_even.html', n=n,
+                           odd_or_even=odd_or_even)
 
 # specify host as 0.0.0.0 and port as 5000 using app.run() method
 if __name__ == '__main__':
