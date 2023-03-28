@@ -77,4 +77,6 @@ class DBStorage():
                                                      expire_on_commit=False))
 
     def close(self):
-        self.__session.close()
+        """Calls remove() on self.__session"""
+        if self.__session:
+            self.__session.remove()
