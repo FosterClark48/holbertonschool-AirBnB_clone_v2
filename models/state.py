@@ -9,6 +9,7 @@ import models
 
 storage_type = getenv("HBNB_TYPE_STORAGE")
 
+
 class State(BaseModel, Base):
     """Name of table in database to link to"""
     __tablename__ = "states"
@@ -19,7 +20,7 @@ class State(BaseModel, Base):
     if storage_type != "db":
         @property
         def cities(self):
-            """ 
+            """
             Getter, returns list of City objects from storage linked
             to current State
             """
