@@ -19,6 +19,7 @@ def hello_hbnb():
     """ Route func that returns gretting message """
     return "Hello HBNB!"
 
+
 # Route decorator for '/hbnb' URL, trailing slashes = ignored
 @app.route('/hbnb', methods=['GET'], strict_slashes=False)
 def hbnb():
